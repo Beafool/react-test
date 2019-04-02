@@ -9,6 +9,7 @@ import { reqLogin } from '../../api';
 
 import logo from './logo.png';
 import './index.less';
+import {setItem} from "../../utils/storage-utils";
 
 const Item = Form.Item;
 
@@ -37,6 +38,8 @@ class Login extends Component {
                     //登录成功
                     //提示登录成功，保存用户登录信息，跳转到主页面
                     message.success('登录成功');
+                    //保存用户数据
+                    setItem(result.data);
                     //已经登录成功，不需要回退了
                     this.props.history.replace('/');
                 }else{

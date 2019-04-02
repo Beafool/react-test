@@ -1,5 +1,5 @@
 /*
-*   包含n个请求模块
+*   包含n个请求函数模块
 * */
 import ajax from './ajax';
 
@@ -25,4 +25,4 @@ import ajax from './ajax';
 const prefix =process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'http://localhost:5000' ;
 
 //请求登录函数
-export const reqLogin =(username,password) => ajax(prefix + './login',{username,password},'POST');
+export const reqLogin =(username,password) => ajax(prefix + '/login',{username,password},'POST');
