@@ -7,7 +7,7 @@ import {
 } from 'antd';
 import { reqLogin } from '../../api';
 
-import logo from './logo.png';
+import logo from '../../assets/images/logo.png';
 import './index.less';
 import {setItem} from "../../utils/storage-utils";
 
