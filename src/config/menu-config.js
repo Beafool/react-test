@@ -32,7 +32,7 @@ const menuList = [
     {
         title: '权限管理',
         key: '/role',
-        icon: 'safety',
+        icon: 'safety-certificate',
     },
     {
         title: '图形图表',
