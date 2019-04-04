@@ -42,12 +42,11 @@ export default class Admin extends Component {
         }
         //判断用户是否登录过
         const user = getItem();
-        if (!user||!user._id){
-            //说明用户没有登录过，跳转到登录页面
-            return this.props.history.replace('/login');
+        if (user && user._id ){
+            //在内存中储存用户信息
+            memory.user = user;
         }
-        //在内存中储存用户信息
-        memory.user = user;
+
     }
 
     onCollapse = (collapsed) => {
@@ -56,6 +55,10 @@ export default class Admin extends Component {
     }
 
     render() {
+        //说明用户没有登录过，跳转到登录页面
+        if (!memory.user||!memory.user._id){
+            return <Redirect to="/login" />
+        }
     const { collapsed } = this.state;
     const opacity = collapsed ? 0 : 1;
         return (
