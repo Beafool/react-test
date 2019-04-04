@@ -55,8 +55,6 @@ export default class Admin extends Component {
         this.setState({ collapsed });
     }
 
-
-
     render() {
     const { collapsed } = this.state;
     const opacity = collapsed ? 0 : 1;
@@ -89,7 +87,8 @@ export default class Admin extends Component {
                         </div>
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>
-                        推荐使用谷歌浏览器，可以获得更佳页面操作体验
+                        Keep your eyes on the stars and your feet on the ground.<br />
+                        仰望星空，脚踏实地。
                     </Footer>
                 </Layout>
             </Layout>
