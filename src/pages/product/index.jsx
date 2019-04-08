@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Card, Table, Select, Button, Input, Icon, message } from 'antd';
-
+import { Link } from 'react-router-dom';
 
 import MyButton from '$comp/my-button';
 import { reqGetProducts } from '$api'
@@ -8,7 +8,7 @@ import './index.less';
 
 const Option = Select.Option;
 
-export default class Product extends Component {
+export default class Index extends Component {
   state = {
     products: [],  // 单页产品数据数组
     total: 0,   // 产品总数量
@@ -86,7 +86,7 @@ export default class Product extends Component {
                 <Button type="primary">搜索</Button>
               </Fragment>
             }
-            extra={<Button type="primary"><Icon type="plus"/>添加产品</Button>}
+            extra={<Link to="/product/saveupdate" ><Button type="primary"><Icon type="plus"/>添加产品</Button></Link>}
 
             className="product"
         >
