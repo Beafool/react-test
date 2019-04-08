@@ -81,6 +81,23 @@ class LeftNav extends Component {
         this.setState({openKeys: []})
     }
 
+
+    /*
+    // 性能优化 - 减少无效的重新渲染
+    shouldComponentUpdate(newProps, newState) {
+      for (let key in newProps) {
+        if (newProps[key] !== this.props[key]) {
+          return true;
+        }
+      }
+
+      if (this.state.openKeys !== newState.openKeys) {
+        return true;
+      }
+
+      return false;
+    }*/
+
     render() {
         // 提取props
         const { location : { pathname } , opacity } = this.props;
@@ -89,7 +106,7 @@ class LeftNav extends Component {
             <Fragment>
                 <Link to="/home" className="logo" onClick={this.handleClick}>
                     <img src={logo} alt="logo"/>
-                    <h1 style={{opacity}}>后台管理系统</h1>
+                    <h1 style={{opacity}}>硅谷后台</h1>
                 </Link>
                 <Menu theme="dark" selectedKeys={[pathname]} mode="inline" openKeys={this.state.openKeys} onOpenChange={this.handleOpenChange}>
                     {
