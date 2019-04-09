@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Route ,Redirect, Switch } from 'react-router-dom';
 
-import Index from './index';
-import Detail from './detail';
-import SaveUpdate from './save-update'
+import Detail from './detail/';
+import SaveUpdate from './saveupdate';
+import Index from './index/index'
 
 export default class Products extends Component {
     render () {

@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Card, Table, Select, Button, Input, Icon, message } from 'antd';
+import { Card, Table, Select, Button, Input, Icon, message } from 'antd/lib/index';
 import { Link } from 'react-router-dom';
 
 import MyButton from '$comp/my-button';
