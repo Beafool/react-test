@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {Route ,Redirect, Switch } from 'react-router-dom';
 
 import Detail from './detail/';
-import SaveUpdate from './saveupdate';
+import SaveUpdate from './save-update';
 import Index from './index/index'
 
-export default class Products extends Component {
+export default class Product extends Component {
     render () {
         return (
             <Switch>

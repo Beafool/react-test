@@ -10,7 +10,7 @@ import {
 
 import Home from '../home';
 import Category from '../category';
-import Product from '../product/products';
+import Product from '../product/index';
 import LeftNav from '../../components/left-nav';
 import User from '../user';
 import Role from '../role';
