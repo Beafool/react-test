@@ -44,7 +44,7 @@ import menuList from "../../config/menu-config";
             })
         },1000)
         //请求天气数据
-        reqWeather('广州')
+        reqWeather('深圳')
             .then(res=>{
                 this.setState({
                     weatherImg:res.weatherImg,

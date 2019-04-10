@@ -68,3 +68,22 @@ export const reqUpdateProduct = (product) => ajax(prefix + '/manage/product/upda
 
 // 请求获取分类名称函数
 export const reqGetCategoryName = (categoryId) => ajax(prefix + '/manage/category/info', {categoryId});
+
+
+// 请求搜索函数
+export const reqSearch = (data) => ajax(prefix + '/manage/product/search', data);
+
+// 请求获取权限列表数据函数
+export const reqRoleList = () => ajax(prefix + '/manage/role/list');
+
+// 请求添加角色数据函数
+export const reqAddRole = (name) => ajax(prefix + '/manage/role/add', {name}, 'POST');
+
+// 请求更新角色数据函数
+export const reqUpdateRole = (role) => ajax(prefix + '/manage/role/update', {role}, 'POST');
+
+//请求添加用户函数
+export const reqAddUser = user => ajax(prefix + '/manage/user/add', user, 'POST');
+
+//请求获取用户列表函数
+export const reqUserList = () => ajax(prefix + '/manage/user/list');

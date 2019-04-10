@@ -14,13 +14,12 @@ import Product from '../product/index';
 import LeftNav from '../../components/left-nav';
 import User from '../user';
 import Role from '../role';
-import Bar from '../charts/bar';
-import Line from '../charts/line';
-import Pie from '../charts/pie';
+
 
 import { getItem } from "../../utils/storage-utils";
 import memory from '../../utils/memory-utils';
 import HeaderMain from "../../components/header-main";
+import Charts from "../charts";
 
 
 const {
@@ -82,9 +81,7 @@ export default class Admin extends Component {
                                 <Route path="/product" component={Product} />
                                 <Route path="/user" component={User} />
                                 <Route path="/role" component={Role} />
-                                <Route path="/charts/bar" component={Bar}/>
-                                <Route path="/charts/line" component={Line}/>
-                                <Route path="/charts/pie" component={Pie}/>
+                                <Route path="/charts" component={Charts} />
                                 <Redirect to="/home" />
                             </Switch>
                         </div>
