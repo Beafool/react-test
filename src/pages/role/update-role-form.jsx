@@ -14,12 +14,10 @@ class UpdateRoleForm extends Component {
     updateRole: PropTypes.func.isRequired
   }
 
-
   onCheck = (checkedKeys) => {
     console.log('onCheck', checkedKeys);
     this.props.updateRole(checkedKeys)
   }
-
 
   renderTreeNodes = data => data.map((item) => {
     if (item.children) {
