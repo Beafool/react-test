@@ -1,37 +1,21 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import {Form, Input, Select } from 'antd';
+import React, { Component } from 'react';
+import { Form, Input, Select } from 'antd';
 
 const Item = Form.Item;
 const Option = Select.Option;
 
+@Form.create()
 class AddUserForm extends Component {
-  static propTypes = {
-    setForm: PropTypes.func.isRequired,
-    roles: PropTypes.array.isRequired,
-  }
   
-  componentWillMount () {
-    const {setForm, form} = this.props;
-    setForm(form);
-  }
-  
-  render () {
-    const {roles} = this.props;
-    const {getFieldDecorator} = this.props.form;
+  render() {
+    const { getFieldDecorator } = this.props.form;
     
     return (
       <Form>
         <Item label='用户名' labelCol={{span: 6}}  wrapperCol={{span: 15}}>
           {
             getFieldDecorator(
-              'username',
-              {
-                rules: [
-                  {required: true, message: '必须输入用户名'},
-                  {min: 3, message: '用户名至少要超过3位'}
-                ]
-              }
+              'name'
             )(
               <Input placeholder='请输入用户名'/>
             )
@@ -67,12 +51,11 @@ class AddUserForm extends Component {
         <Item label='角色' labelCol={{span: 6}}  wrapperCol={{span: 15}}>
           {
             getFieldDecorator(
-              'role_id'
+              'role'
             )(
               <Select placeholder='请选择分类'>
-                {
-                  roles.map(item => <Option value={item._id} key={item._id}>{item.name}</Option>)
-                }
+                <Option value='1'>1</Option>
+                <Option value='2'>2</Option>
               </Select>
             )
           }
@@ -82,4 +65,4 @@ class AddUserForm extends Component {
   }
 }
 
-export default Form.create()(AddUserForm)
+export default AddUserForm;

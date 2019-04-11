@@ -1,18 +1,14 @@
-import React, {Component} from 'react';
-import {Form, Input, Select} from 'antd';
+import React, { Component } from 'react';
+import { Form, Input, Select } from 'antd';
 
 const Item = Form.Item;
 const Option = Select.Option;
 
+@Form.create()
 class UpdateUserForm extends Component {
-  
-  componentWillMount () {
-    const {setForm, form} = this.props;
-    setForm(form);
-  }
-  
+
   render () {
-    const {getFieldDecorator} = this.props.form;
+    const { getFieldDecorator } = this.props.form;
     
     return (
       <Form>
@@ -63,4 +59,4 @@ class UpdateUserForm extends Component {
   }
 }
 
-export default Form.create()(UpdateUserForm)
+export default UpdateUserForm;
